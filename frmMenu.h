@@ -32,11 +32,13 @@ namespace ProjetoAED1 {
 
 		protected:
 			~frmMenu() {
-				if (components)
-				{
+				if (components) {
 					delete components;
 				}
 			}
+
+		private:
+			System::ComponentModel::Container ^components;
 
 		#pragma region Componentes
 		private: System::Windows::Forms::Label^ lblEstoque;
@@ -93,10 +95,8 @@ namespace ProjetoAED1 {
 		private: System::Windows::Forms::Label^ lblResultadoProduto;
 		private: System::Windows::Forms::Label^ lblEstoqueVazio;
 		private: System::Windows::Forms::Label^ lblTotal;
-		#pragma endregion
 
-		private:
-			System::ComponentModel::Container ^components;
+#pragma endregion
 
 		#pragma region Windows Form Designer generated code
 		/// <summary>
@@ -160,8 +160,8 @@ namespace ProjetoAED1 {
 			this->lblTotal = (gcnew System::Windows::Forms::Label());
 			this->lblExibirEstoque = (gcnew System::Windows::Forms::Label());
 			this->btnExibeEstoqueSair = (gcnew System::Windows::Forms::Button());
-			this->lblEstoqueVazio = (gcnew System::Windows::Forms::Label());
 			this->dgvEstoque = (gcnew System::Windows::Forms::DataGridView());
+			this->lblEstoqueVazio = (gcnew System::Windows::Forms::Label());
 			this->pnlAdicionar->SuspendLayout();
 			this->pnlAlterarQuantidade->SuspendLayout();
 			this->pnlRemover->SuspendLayout();
@@ -175,9 +175,10 @@ namespace ProjetoAED1 {
 			// 
 			this->lblEstoque->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblEstoque->Location = System::Drawing::Point(182, 44);
+			this->lblEstoque->Location = System::Drawing::Point(248, 54);
+			this->lblEstoque->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblEstoque->Name = L"lblEstoque";
-			this->lblEstoque->Size = System::Drawing::Size(501, 43);
+			this->lblEstoque->Size = System::Drawing::Size(668, 53);
 			this->lblEstoque->TabIndex = 0;
 			this->lblEstoque->Text = L"Controle de Estoque - Supermercado";
 			// 
@@ -188,9 +189,10 @@ namespace ProjetoAED1 {
 			this->btnAdicionar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnAdicionar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnAdicionar->Location = System::Drawing::Point(260, 120);
+			this->btnAdicionar->Location = System::Drawing::Point(347, 148);
+			this->btnAdicionar->Margin = System::Windows::Forms::Padding(4);
 			this->btnAdicionar->Name = L"btnAdicionar";
-			this->btnAdicionar->Size = System::Drawing::Size(353, 53);
+			this->btnAdicionar->Size = System::Drawing::Size(471, 65);
 			this->btnAdicionar->TabIndex = 1;
 			this->btnAdicionar->Text = L"Adicionar produto";
 			this->btnAdicionar->UseVisualStyleBackColor = false;
@@ -203,9 +205,10 @@ namespace ProjetoAED1 {
 			this->btnAlterarQuantidade->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnAlterarQuantidade->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnAlterarQuantidade->Location = System::Drawing::Point(260, 179);
+			this->btnAlterarQuantidade->Location = System::Drawing::Point(347, 220);
+			this->btnAlterarQuantidade->Margin = System::Windows::Forms::Padding(4);
 			this->btnAlterarQuantidade->Name = L"btnAlterarQuantidade";
-			this->btnAlterarQuantidade->Size = System::Drawing::Size(351, 53);
+			this->btnAlterarQuantidade->Size = System::Drawing::Size(468, 65);
 			this->btnAlterarQuantidade->TabIndex = 2;
 			this->btnAlterarQuantidade->Text = L"Alterar quantidade de um produto";
 			this->btnAlterarQuantidade->UseVisualStyleBackColor = false;
@@ -218,9 +221,10 @@ namespace ProjetoAED1 {
 			this->btnRemover->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnRemover->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnRemover->Location = System::Drawing::Point(260, 238);
+			this->btnRemover->Location = System::Drawing::Point(347, 293);
+			this->btnRemover->Margin = System::Windows::Forms::Padding(4);
 			this->btnRemover->Name = L"btnRemover";
-			this->btnRemover->Size = System::Drawing::Size(353, 53);
+			this->btnRemover->Size = System::Drawing::Size(471, 65);
 			this->btnRemover->TabIndex = 3;
 			this->btnRemover->Text = L"Remover produto";
 			this->btnRemover->UseVisualStyleBackColor = false;
@@ -233,9 +237,10 @@ namespace ProjetoAED1 {
 			this->btnExibirProduto->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnExibirProduto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnExibirProduto->Location = System::Drawing::Point(260, 297);
+			this->btnExibirProduto->Location = System::Drawing::Point(347, 366);
+			this->btnExibirProduto->Margin = System::Windows::Forms::Padding(4);
 			this->btnExibirProduto->Name = L"btnExibirProduto";
-			this->btnExibirProduto->Size = System::Drawing::Size(353, 53);
+			this->btnExibirProduto->Size = System::Drawing::Size(471, 65);
 			this->btnExibirProduto->TabIndex = 4;
 			this->btnExibirProduto->Text = L"Exibir produto";
 			this->btnExibirProduto->UseVisualStyleBackColor = false;
@@ -248,9 +253,10 @@ namespace ProjetoAED1 {
 			this->btnExibirEstoque->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnExibirEstoque->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnExibirEstoque->Location = System::Drawing::Point(260, 356);
+			this->btnExibirEstoque->Location = System::Drawing::Point(347, 438);
+			this->btnExibirEstoque->Margin = System::Windows::Forms::Padding(4);
 			this->btnExibirEstoque->Name = L"btnExibirEstoque";
-			this->btnExibirEstoque->Size = System::Drawing::Size(353, 53);
+			this->btnExibirEstoque->Size = System::Drawing::Size(471, 65);
 			this->btnExibirEstoque->TabIndex = 5;
 			this->btnExibirEstoque->Text = L"Exibir estoque";
 			this->btnExibirEstoque->UseVisualStyleBackColor = false;
@@ -263,9 +269,10 @@ namespace ProjetoAED1 {
 			this->btnSair->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnSair->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnSair->Location = System::Drawing::Point(749, 463);
+			this->btnSair->Location = System::Drawing::Point(999, 570);
+			this->btnSair->Margin = System::Windows::Forms::Padding(4);
 			this->btnSair->Name = L"btnSair";
-			this->btnSair->Size = System::Drawing::Size(91, 37);
+			this->btnSair->Size = System::Drawing::Size(121, 46);
 			this->btnSair->TabIndex = 6;
 			this->btnSair->Text = L"Sair";
 			this->btnSair->UseVisualStyleBackColor = false;
@@ -283,18 +290,20 @@ namespace ProjetoAED1 {
 			this->pnlAdicionar->Controls->Add(this->btnAdicionarPanel);
 			this->pnlAdicionar->Controls->Add(this->lblAdicionar);
 			this->pnlAdicionar->Controls->Add(this->btnAdicionarSair);
-			this->pnlAdicionar->Location = System::Drawing::Point(24, 66);
+			this->pnlAdicionar->Location = System::Drawing::Point(32, 81);
+			this->pnlAdicionar->Margin = System::Windows::Forms::Padding(4);
 			this->pnlAdicionar->Name = L"pnlAdicionar";
-			this->pnlAdicionar->Size = System::Drawing::Size(133, 75);
+			this->pnlAdicionar->Size = System::Drawing::Size(177, 92);
 			this->pnlAdicionar->TabIndex = 30;
 			// 
 			// lblResultado
 			// 
 			this->lblResultado->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblResultado->Location = System::Drawing::Point(240, 359);
+			this->lblResultado->Location = System::Drawing::Point(320, 442);
+			this->lblResultado->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblResultado->Name = L"lblResultado";
-			this->lblResultado->Size = System::Drawing::Size(442, 36);
+			this->lblResultado->Size = System::Drawing::Size(589, 44);
 			this->lblResultado->TabIndex = 25;
 			this->lblResultado->Text = L"Resultado";
 			this->lblResultado->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -305,9 +314,10 @@ namespace ProjetoAED1 {
 			this->txtQuantidade->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->txtQuantidade->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txtQuantidade->Location = System::Drawing::Point(350, 220);
+			this->txtQuantidade->Location = System::Drawing::Point(467, 271);
+			this->txtQuantidade->Margin = System::Windows::Forms::Padding(4);
 			this->txtQuantidade->Name = L"txtQuantidade";
-			this->txtQuantidade->Size = System::Drawing::Size(223, 29);
+			this->txtQuantidade->Size = System::Drawing::Size(297, 34);
 			this->txtQuantidade->TabIndex = 2;
 			// 
 			// txtPreco
@@ -315,9 +325,10 @@ namespace ProjetoAED1 {
 			this->txtPreco->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->txtPreco->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txtPreco->Location = System::Drawing::Point(350, 174);
+			this->txtPreco->Location = System::Drawing::Point(467, 214);
+			this->txtPreco->Margin = System::Windows::Forms::Padding(4);
 			this->txtPreco->Name = L"txtPreco";
-			this->txtPreco->Size = System::Drawing::Size(223, 29);
+			this->txtPreco->Size = System::Drawing::Size(297, 34);
 			this->txtPreco->TabIndex = 1;
 			// 
 			// txtNome
@@ -325,18 +336,20 @@ namespace ProjetoAED1 {
 			this->txtNome->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->txtNome->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txtNome->Location = System::Drawing::Point(350, 127);
+			this->txtNome->Location = System::Drawing::Point(467, 156);
+			this->txtNome->Margin = System::Windows::Forms::Padding(4);
 			this->txtNome->Name = L"txtNome";
-			this->txtNome->Size = System::Drawing::Size(223, 29);
+			this->txtNome->Size = System::Drawing::Size(297, 34);
 			this->txtNome->TabIndex = 0;
 			// 
 			// lblPreco
 			// 
 			this->lblPreco->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblPreco->Location = System::Drawing::Point(265, 174);
+			this->lblPreco->Location = System::Drawing::Point(353, 214);
+			this->lblPreco->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblPreco->Name = L"lblPreco";
-			this->lblPreco->Size = System::Drawing::Size(79, 29);
+			this->lblPreco->Size = System::Drawing::Size(105, 36);
 			this->lblPreco->TabIndex = 21;
 			this->lblPreco->Text = L"Preço:";
 			this->lblPreco->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -345,9 +358,10 @@ namespace ProjetoAED1 {
 			// 
 			this->lblQuantidade->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblQuantidade->Location = System::Drawing::Point(210, 221);
+			this->lblQuantidade->Location = System::Drawing::Point(280, 272);
+			this->lblQuantidade->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblQuantidade->Name = L"lblQuantidade";
-			this->lblQuantidade->Size = System::Drawing::Size(134, 29);
+			this->lblQuantidade->Size = System::Drawing::Size(179, 36);
 			this->lblQuantidade->TabIndex = 20;
 			this->lblQuantidade->Text = L"Quantidade:";
 			this->lblQuantidade->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -356,9 +370,10 @@ namespace ProjetoAED1 {
 			// 
 			this->lblNome->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblNome->Location = System::Drawing::Point(265, 127);
+			this->lblNome->Location = System::Drawing::Point(353, 156);
+			this->lblNome->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblNome->Name = L"lblNome";
-			this->lblNome->Size = System::Drawing::Size(79, 29);
+			this->lblNome->Size = System::Drawing::Size(105, 36);
 			this->lblNome->TabIndex = 19;
 			this->lblNome->Text = L"Nome:";
 			this->lblNome->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -369,9 +384,10 @@ namespace ProjetoAED1 {
 			this->btnAdicionarPanel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnAdicionarPanel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnAdicionarPanel->Location = System::Drawing::Point(366, 280);
+			this->btnAdicionarPanel->Location = System::Drawing::Point(488, 345);
+			this->btnAdicionarPanel->Margin = System::Windows::Forms::Padding(4);
 			this->btnAdicionarPanel->Name = L"btnAdicionarPanel";
-			this->btnAdicionarPanel->Size = System::Drawing::Size(190, 40);
+			this->btnAdicionarPanel->Size = System::Drawing::Size(253, 49);
 			this->btnAdicionarPanel->TabIndex = 3;
 			this->btnAdicionarPanel->Text = L"Adicionar produto";
 			this->btnAdicionarPanel->UseVisualStyleBackColor = false;
@@ -381,9 +397,10 @@ namespace ProjetoAED1 {
 			// 
 			this->lblAdicionar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblAdicionar->Location = System::Drawing::Point(249, 40);
+			this->lblAdicionar->Location = System::Drawing::Point(332, 49);
+			this->lblAdicionar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblAdicionar->Name = L"lblAdicionar";
-			this->lblAdicionar->Size = System::Drawing::Size(400, 60);
+			this->lblAdicionar->Size = System::Drawing::Size(533, 74);
 			this->lblAdicionar->TabIndex = 0;
 			this->lblAdicionar->Text = L"Adicionar produto";
 			this->lblAdicionar->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -395,9 +412,10 @@ namespace ProjetoAED1 {
 			this->btnAdicionarSair->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnAdicionarSair->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnAdicionarSair->Location = System::Drawing::Point(749, 463);
+			this->btnAdicionarSair->Location = System::Drawing::Point(999, 570);
+			this->btnAdicionarSair->Margin = System::Windows::Forms::Padding(4);
 			this->btnAdicionarSair->Name = L"btnAdicionarSair";
-			this->btnAdicionarSair->Size = System::Drawing::Size(91, 37);
+			this->btnAdicionarSair->Size = System::Drawing::Size(121, 46);
 			this->btnAdicionarSair->TabIndex = 4;
 			this->btnAdicionarSair->Text = L"Voltar";
 			this->btnAdicionarSair->UseVisualStyleBackColor = false;
@@ -413,18 +431,20 @@ namespace ProjetoAED1 {
 			this->pnlAlterarQuantidade->Controls->Add(this->btnAlterarPanel);
 			this->pnlAlterarQuantidade->Controls->Add(this->lblAlterarQuantidade);
 			this->pnlAlterarQuantidade->Controls->Add(this->btnAlterarQuantidadeSair);
-			this->pnlAlterarQuantidade->Location = System::Drawing::Point(24, 147);
+			this->pnlAlterarQuantidade->Location = System::Drawing::Point(32, 181);
+			this->pnlAlterarQuantidade->Margin = System::Windows::Forms::Padding(4);
 			this->pnlAlterarQuantidade->Name = L"pnlAlterarQuantidade";
-			this->pnlAlterarQuantidade->Size = System::Drawing::Size(133, 75);
+			this->pnlAlterarQuantidade->Size = System::Drawing::Size(177, 92);
 			this->pnlAlterarQuantidade->TabIndex = 30;
 			// 
 			// lblResultadoQuantidade
 			// 
 			this->lblResultadoQuantidade->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->lblResultadoQuantidade->Location = System::Drawing::Point(250, 326);
+			this->lblResultadoQuantidade->Location = System::Drawing::Point(333, 401);
+			this->lblResultadoQuantidade->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblResultadoQuantidade->Name = L"lblResultadoQuantidade";
-			this->lblResultadoQuantidade->Size = System::Drawing::Size(401, 29);
+			this->lblResultadoQuantidade->Size = System::Drawing::Size(535, 36);
 			this->lblResultadoQuantidade->TabIndex = 29;
 			this->lblResultadoQuantidade->Text = L"Resultado";
 			this->lblResultadoQuantidade->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -435,9 +455,10 @@ namespace ProjetoAED1 {
 			this->txtNomeAlterar->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->txtNomeAlterar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txtNomeAlterar->Location = System::Drawing::Point(337, 127);
+			this->txtNomeAlterar->Location = System::Drawing::Point(449, 156);
+			this->txtNomeAlterar->Margin = System::Windows::Forms::Padding(4);
 			this->txtNomeAlterar->Name = L"txtNomeAlterar";
-			this->txtNomeAlterar->Size = System::Drawing::Size(231, 29);
+			this->txtNomeAlterar->Size = System::Drawing::Size(307, 34);
 			this->txtNomeAlterar->TabIndex = 0;
 			// 
 			// txtQuantidadeAlterar
@@ -445,18 +466,20 @@ namespace ProjetoAED1 {
 			this->txtQuantidadeAlterar->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->txtQuantidadeAlterar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->txtQuantidadeAlterar->Location = System::Drawing::Point(337, 170);
+			this->txtQuantidadeAlterar->Location = System::Drawing::Point(449, 209);
+			this->txtQuantidadeAlterar->Margin = System::Windows::Forms::Padding(4);
 			this->txtQuantidadeAlterar->Name = L"txtQuantidadeAlterar";
-			this->txtQuantidadeAlterar->Size = System::Drawing::Size(231, 29);
+			this->txtQuantidadeAlterar->Size = System::Drawing::Size(307, 34);
 			this->txtQuantidadeAlterar->TabIndex = 1;
 			// 
 			// lblQuantidadeAlterar
 			// 
 			this->lblQuantidadeAlterar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblQuantidadeAlterar->Location = System::Drawing::Point(155, 170);
+			this->lblQuantidadeAlterar->Location = System::Drawing::Point(207, 209);
+			this->lblQuantidadeAlterar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblQuantidadeAlterar->Name = L"lblQuantidadeAlterar";
-			this->lblQuantidadeAlterar->Size = System::Drawing::Size(176, 29);
+			this->lblQuantidadeAlterar->Size = System::Drawing::Size(235, 36);
 			this->lblQuantidadeAlterar->TabIndex = 28;
 			this->lblQuantidadeAlterar->Text = L"Nova quantidade:";
 			this->lblQuantidadeAlterar->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -465,9 +488,10 @@ namespace ProjetoAED1 {
 			// 
 			this->lblNomeAlterar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblNomeAlterar->Location = System::Drawing::Point(252, 127);
+			this->lblNomeAlterar->Location = System::Drawing::Point(336, 156);
+			this->lblNomeAlterar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblNomeAlterar->Name = L"lblNomeAlterar";
-			this->lblNomeAlterar->Size = System::Drawing::Size(79, 29);
+			this->lblNomeAlterar->Size = System::Drawing::Size(105, 36);
 			this->lblNomeAlterar->TabIndex = 27;
 			this->lblNomeAlterar->Text = L"Nome:";
 			this->lblNomeAlterar->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -478,9 +502,10 @@ namespace ProjetoAED1 {
 			this->btnAlterarPanel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnAlterarPanel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnAlterarPanel->Location = System::Drawing::Point(356, 240);
+			this->btnAlterarPanel->Location = System::Drawing::Point(475, 295);
+			this->btnAlterarPanel->Margin = System::Windows::Forms::Padding(4);
 			this->btnAlterarPanel->Name = L"btnAlterarPanel";
-			this->btnAlterarPanel->Size = System::Drawing::Size(199, 40);
+			this->btnAlterarPanel->Size = System::Drawing::Size(265, 49);
 			this->btnAlterarPanel->TabIndex = 2;
 			this->btnAlterarPanel->Text = L"Alterar quantidade";
 			this->btnAlterarPanel->UseVisualStyleBackColor = false;
@@ -490,9 +515,10 @@ namespace ProjetoAED1 {
 			// 
 			this->lblAlterarQuantidade->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblAlterarQuantidade->Location = System::Drawing::Point(246, 38);
+			this->lblAlterarQuantidade->Location = System::Drawing::Point(328, 47);
+			this->lblAlterarQuantidade->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblAlterarQuantidade->Name = L"lblAlterarQuantidade";
-			this->lblAlterarQuantidade->Size = System::Drawing::Size(400, 60);
+			this->lblAlterarQuantidade->Size = System::Drawing::Size(533, 74);
 			this->lblAlterarQuantidade->TabIndex = 25;
 			this->lblAlterarQuantidade->Text = L"Alterar quantidade";
 			this->lblAlterarQuantidade->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -504,9 +530,10 @@ namespace ProjetoAED1 {
 			this->btnAlterarQuantidadeSair->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnAlterarQuantidadeSair->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->btnAlterarQuantidadeSair->Location = System::Drawing::Point(749, 463);
+			this->btnAlterarQuantidadeSair->Location = System::Drawing::Point(999, 570);
+			this->btnAlterarQuantidadeSair->Margin = System::Windows::Forms::Padding(4);
 			this->btnAlterarQuantidadeSair->Name = L"btnAlterarQuantidadeSair";
-			this->btnAlterarQuantidadeSair->Size = System::Drawing::Size(91, 37);
+			this->btnAlterarQuantidadeSair->Size = System::Drawing::Size(121, 46);
 			this->btnAlterarQuantidadeSair->TabIndex = 3;
 			this->btnAlterarQuantidadeSair->Text = L"Voltar";
 			this->btnAlterarQuantidadeSair->UseVisualStyleBackColor = false;
@@ -520,18 +547,20 @@ namespace ProjetoAED1 {
 			this->pnlRemover->Controls->Add(this->btnRemoverPanel);
 			this->pnlRemover->Controls->Add(this->lblRemover);
 			this->pnlRemover->Controls->Add(this->btnRemoverSair);
-			this->pnlRemover->Location = System::Drawing::Point(24, 228);
+			this->pnlRemover->Location = System::Drawing::Point(32, 281);
+			this->pnlRemover->Margin = System::Windows::Forms::Padding(4);
 			this->pnlRemover->Name = L"pnlRemover";
-			this->pnlRemover->Size = System::Drawing::Size(133, 75);
+			this->pnlRemover->Size = System::Drawing::Size(177, 92);
 			this->pnlRemover->TabIndex = 30;
 			// 
 			// lblResultadoRemover
 			// 
 			this->lblResultadoRemover->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblResultadoRemover->Location = System::Drawing::Point(273, 297);
+			this->lblResultadoRemover->Location = System::Drawing::Point(364, 366);
+			this->lblResultadoRemover->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblResultadoRemover->Name = L"lblResultadoRemover";
-			this->lblResultadoRemover->Size = System::Drawing::Size(372, 29);
+			this->lblResultadoRemover->Size = System::Drawing::Size(496, 36);
 			this->lblResultadoRemover->TabIndex = 37;
 			this->lblResultadoRemover->Text = L"Resultado";
 			this->lblResultadoRemover->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -542,18 +571,20 @@ namespace ProjetoAED1 {
 			this->txtNomeRemover->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->txtNomeRemover->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txtNomeRemover->Location = System::Drawing::Point(375, 139);
+			this->txtNomeRemover->Location = System::Drawing::Point(500, 171);
+			this->txtNomeRemover->Margin = System::Windows::Forms::Padding(4);
 			this->txtNomeRemover->Name = L"txtNomeRemover";
-			this->txtNomeRemover->Size = System::Drawing::Size(223, 29);
+			this->txtNomeRemover->Size = System::Drawing::Size(297, 34);
 			this->txtNomeRemover->TabIndex = 0;
 			// 
 			// lblRemoverNome
 			// 
 			this->lblRemoverNome->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblRemoverNome->Location = System::Drawing::Point(290, 139);
+			this->lblRemoverNome->Location = System::Drawing::Point(387, 171);
+			this->lblRemoverNome->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblRemoverNome->Name = L"lblRemoverNome";
-			this->lblRemoverNome->Size = System::Drawing::Size(79, 29);
+			this->lblRemoverNome->Size = System::Drawing::Size(105, 36);
 			this->lblRemoverNome->TabIndex = 36;
 			this->lblRemoverNome->Text = L"Nome:";
 			this->lblRemoverNome->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -564,9 +595,10 @@ namespace ProjetoAED1 {
 			this->btnRemoverPanel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnRemoverPanel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnRemoverPanel->Location = System::Drawing::Point(375, 199);
+			this->btnRemoverPanel->Location = System::Drawing::Point(500, 245);
+			this->btnRemoverPanel->Margin = System::Windows::Forms::Padding(4);
 			this->btnRemoverPanel->Name = L"btnRemoverPanel";
-			this->btnRemoverPanel->Size = System::Drawing::Size(199, 40);
+			this->btnRemoverPanel->Size = System::Drawing::Size(265, 49);
 			this->btnRemoverPanel->TabIndex = 1;
 			this->btnRemoverPanel->Text = L"Remover produto";
 			this->btnRemoverPanel->UseVisualStyleBackColor = false;
@@ -576,9 +608,10 @@ namespace ProjetoAED1 {
 			// 
 			this->lblRemover->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblRemover->Location = System::Drawing::Point(251, 40);
+			this->lblRemover->Location = System::Drawing::Point(335, 49);
+			this->lblRemover->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblRemover->Name = L"lblRemover";
-			this->lblRemover->Size = System::Drawing::Size(400, 60);
+			this->lblRemover->Size = System::Drawing::Size(533, 74);
 			this->lblRemover->TabIndex = 0;
 			this->lblRemover->Text = L"Remover produto";
 			this->lblRemover->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -590,9 +623,10 @@ namespace ProjetoAED1 {
 			this->btnRemoverSair->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnRemoverSair->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnRemoverSair->Location = System::Drawing::Point(749, 463);
+			this->btnRemoverSair->Location = System::Drawing::Point(999, 570);
+			this->btnRemoverSair->Margin = System::Windows::Forms::Padding(4);
 			this->btnRemoverSair->Name = L"btnRemoverSair";
-			this->btnRemoverSair->Size = System::Drawing::Size(91, 37);
+			this->btnRemoverSair->Size = System::Drawing::Size(121, 46);
 			this->btnRemoverSair->TabIndex = 2;
 			this->btnRemoverSair->Text = L"Voltar";
 			this->btnRemoverSair->UseVisualStyleBackColor = false;
@@ -607,18 +641,20 @@ namespace ProjetoAED1 {
 			this->pnlExibirProduto->Controls->Add(this->btnExibirProdutoPanel);
 			this->pnlExibirProduto->Controls->Add(this->lblExibirProduto);
 			this->pnlExibirProduto->Controls->Add(this->btnExibirProdutoSair);
-			this->pnlExibirProduto->Location = System::Drawing::Point(24, 309);
+			this->pnlExibirProduto->Location = System::Drawing::Point(32, 380);
+			this->pnlExibirProduto->Margin = System::Windows::Forms::Padding(4);
 			this->pnlExibirProduto->Name = L"pnlExibirProduto";
-			this->pnlExibirProduto->Size = System::Drawing::Size(133, 75);
+			this->pnlExibirProduto->Size = System::Drawing::Size(177, 92);
 			this->pnlExibirProduto->TabIndex = 30;
 			// 
 			// lblResultadoProduto
 			// 
 			this->lblResultadoProduto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblResultadoProduto->Location = System::Drawing::Point(247, 225);
+			this->lblResultadoProduto->Location = System::Drawing::Point(329, 277);
+			this->lblResultadoProduto->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblResultadoProduto->Name = L"lblResultadoProduto";
-			this->lblResultadoProduto->Size = System::Drawing::Size(400, 29);
+			this->lblResultadoProduto->Size = System::Drawing::Size(533, 36);
 			this->lblResultadoProduto->TabIndex = 37;
 			this->lblResultadoProduto->Text = L"Resultado";
 			this->lblResultadoProduto->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -637,9 +673,11 @@ namespace ProjetoAED1 {
 			this->gpbExibirProduto->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->gpbExibirProduto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->gpbExibirProduto->Location = System::Drawing::Point(249, 270);
+			this->gpbExibirProduto->Location = System::Drawing::Point(332, 332);
+			this->gpbExibirProduto->Margin = System::Windows::Forms::Padding(4);
 			this->gpbExibirProduto->Name = L"gpbExibirProduto";
-			this->gpbExibirProduto->Size = System::Drawing::Size(398, 180);
+			this->gpbExibirProduto->Padding = System::Windows::Forms::Padding(4);
+			this->gpbExibirProduto->Size = System::Drawing::Size(531, 222);
 			this->gpbExibirProduto->TabIndex = 21;
 			this->gpbExibirProduto->TabStop = false;
 			this->gpbExibirProduto->Text = L"Dados do produto";
@@ -647,54 +685,60 @@ namespace ProjetoAED1 {
 			// lblExibeQuantidade
 			// 
 			this->lblExibeQuantidade->AutoSize = true;
-			this->lblExibeQuantidade->Location = System::Drawing::Point(132, 132);
+			this->lblExibeQuantidade->Location = System::Drawing::Point(176, 162);
+			this->lblExibeQuantidade->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblExibeQuantidade->Name = L"lblExibeQuantidade";
-			this->lblExibeQuantidade->Size = System::Drawing::Size(114, 24);
+			this->lblExibeQuantidade->Size = System::Drawing::Size(143, 29);
 			this->lblExibeQuantidade->TabIndex = 5;
 			this->lblExibeQuantidade->Text = L"quantidade";
 			// 
 			// lblExibePreco
 			// 
 			this->lblExibePreco->AutoSize = true;
-			this->lblExibePreco->Location = System::Drawing::Point(132, 92);
+			this->lblExibePreco->Location = System::Drawing::Point(176, 113);
+			this->lblExibePreco->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblExibePreco->Name = L"lblExibePreco";
-			this->lblExibePreco->Size = System::Drawing::Size(64, 24);
+			this->lblExibePreco->Size = System::Drawing::Size(80, 29);
 			this->lblExibePreco->TabIndex = 4;
 			this->lblExibePreco->Text = L"preço";
 			// 
 			// lblExibeNome
 			// 
 			this->lblExibeNome->AutoSize = true;
-			this->lblExibeNome->Location = System::Drawing::Point(132, 48);
+			this->lblExibeNome->Location = System::Drawing::Point(176, 59);
+			this->lblExibeNome->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblExibeNome->Name = L"lblExibeNome";
-			this->lblExibeNome->Size = System::Drawing::Size(63, 24);
+			this->lblExibeNome->Size = System::Drawing::Size(78, 29);
 			this->lblExibeNome->TabIndex = 3;
 			this->lblExibeNome->Text = L"nome";
 			// 
 			// lblQuantidadeGPBProduto
 			// 
 			this->lblQuantidadeGPBProduto->AutoSize = true;
-			this->lblQuantidadeGPBProduto->Location = System::Drawing::Point(13, 132);
+			this->lblQuantidadeGPBProduto->Location = System::Drawing::Point(17, 162);
+			this->lblQuantidadeGPBProduto->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblQuantidadeGPBProduto->Name = L"lblQuantidadeGPBProduto";
-			this->lblQuantidadeGPBProduto->Size = System::Drawing::Size(124, 24);
+			this->lblQuantidadeGPBProduto->Size = System::Drawing::Size(155, 29);
 			this->lblQuantidadeGPBProduto->TabIndex = 2;
 			this->lblQuantidadeGPBProduto->Text = L"Quantidade:";
 			// 
 			// lblPrecoGPBProduto
 			// 
 			this->lblPrecoGPBProduto->AutoSize = true;
-			this->lblPrecoGPBProduto->Location = System::Drawing::Point(61, 91);
+			this->lblPrecoGPBProduto->Location = System::Drawing::Point(81, 112);
+			this->lblPrecoGPBProduto->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblPrecoGPBProduto->Name = L"lblPrecoGPBProduto";
-			this->lblPrecoGPBProduto->Size = System::Drawing::Size(71, 24);
+			this->lblPrecoGPBProduto->Size = System::Drawing::Size(89, 29);
 			this->lblPrecoGPBProduto->TabIndex = 1;
 			this->lblPrecoGPBProduto->Text = L"Preço:";
 			// 
 			// lblNomeGPBProduto
 			// 
 			this->lblNomeGPBProduto->AutoSize = true;
-			this->lblNomeGPBProduto->Location = System::Drawing::Point(59, 48);
+			this->lblNomeGPBProduto->Location = System::Drawing::Point(79, 59);
+			this->lblNomeGPBProduto->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblNomeGPBProduto->Name = L"lblNomeGPBProduto";
-			this->lblNomeGPBProduto->Size = System::Drawing::Size(72, 24);
+			this->lblNomeGPBProduto->Size = System::Drawing::Size(90, 29);
 			this->lblNomeGPBProduto->TabIndex = 0;
 			this->lblNomeGPBProduto->Text = L"Nome:";
 			// 
@@ -703,18 +747,20 @@ namespace ProjetoAED1 {
 			this->txtNomeExibirProduto->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->txtNomeExibirProduto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->txtNomeExibirProduto->Location = System::Drawing::Point(347, 111);
+			this->txtNomeExibirProduto->Location = System::Drawing::Point(463, 137);
+			this->txtNomeExibirProduto->Margin = System::Windows::Forms::Padding(4);
 			this->txtNomeExibirProduto->Name = L"txtNomeExibirProduto";
-			this->txtNomeExibirProduto->Size = System::Drawing::Size(223, 29);
+			this->txtNomeExibirProduto->Size = System::Drawing::Size(297, 34);
 			this->txtNomeExibirProduto->TabIndex = 0;
 			// 
 			// lblNomeExibirProduto
 			// 
 			this->lblNomeExibirProduto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblNomeExibirProduto->Location = System::Drawing::Point(262, 111);
+			this->lblNomeExibirProduto->Location = System::Drawing::Point(349, 137);
+			this->lblNomeExibirProduto->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblNomeExibirProduto->Name = L"lblNomeExibirProduto";
-			this->lblNomeExibirProduto->Size = System::Drawing::Size(79, 29);
+			this->lblNomeExibirProduto->Size = System::Drawing::Size(105, 36);
 			this->lblNomeExibirProduto->TabIndex = 36;
 			this->lblNomeExibirProduto->Text = L"Nome:";
 			this->lblNomeExibirProduto->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -725,9 +771,10 @@ namespace ProjetoAED1 {
 			this->btnExibirProdutoPanel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnExibirProdutoPanel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnExibirProdutoPanel->Location = System::Drawing::Point(358, 163);
+			this->btnExibirProdutoPanel->Location = System::Drawing::Point(477, 201);
+			this->btnExibirProdutoPanel->Margin = System::Windows::Forms::Padding(4);
 			this->btnExibirProdutoPanel->Name = L"btnExibirProdutoPanel";
-			this->btnExibirProdutoPanel->Size = System::Drawing::Size(199, 40);
+			this->btnExibirProdutoPanel->Size = System::Drawing::Size(265, 49);
 			this->btnExibirProdutoPanel->TabIndex = 1;
 			this->btnExibirProdutoPanel->Text = L"Exibir produto";
 			this->btnExibirProdutoPanel->UseVisualStyleBackColor = false;
@@ -737,9 +784,10 @@ namespace ProjetoAED1 {
 			// 
 			this->lblExibirProduto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblExibirProduto->Location = System::Drawing::Point(236, 30);
+			this->lblExibirProduto->Location = System::Drawing::Point(315, 37);
+			this->lblExibirProduto->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblExibirProduto->Name = L"lblExibirProduto";
-			this->lblExibirProduto->Size = System::Drawing::Size(400, 60);
+			this->lblExibirProduto->Size = System::Drawing::Size(533, 74);
 			this->lblExibirProduto->TabIndex = 34;
 			this->lblExibirProduto->Text = L"Exibir produto";
 			this->lblExibirProduto->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -751,9 +799,10 @@ namespace ProjetoAED1 {
 			this->btnExibirProdutoSair->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnExibirProdutoSair->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnExibirProdutoSair->Location = System::Drawing::Point(749, 463);
+			this->btnExibirProdutoSair->Location = System::Drawing::Point(999, 570);
+			this->btnExibirProdutoSair->Margin = System::Windows::Forms::Padding(4);
 			this->btnExibirProdutoSair->Name = L"btnExibirProdutoSair";
-			this->btnExibirProdutoSair->Size = System::Drawing::Size(91, 37);
+			this->btnExibirProdutoSair->Size = System::Drawing::Size(121, 46);
 			this->btnExibirProdutoSair->TabIndex = 2;
 			this->btnExibirProdutoSair->Text = L"Voltar";
 			this->btnExibirProdutoSair->UseVisualStyleBackColor = false;
@@ -766,18 +815,20 @@ namespace ProjetoAED1 {
 			this->pnlExibirEstoque->Controls->Add(this->btnExibeEstoqueSair);
 			this->pnlExibirEstoque->Controls->Add(this->dgvEstoque);
 			this->pnlExibirEstoque->Controls->Add(this->lblEstoqueVazio);
-			this->pnlExibirEstoque->Location = System::Drawing::Point(24, 390);
+			this->pnlExibirEstoque->Location = System::Drawing::Point(32, 480);
+			this->pnlExibirEstoque->Margin = System::Windows::Forms::Padding(4);
 			this->pnlExibirEstoque->Name = L"pnlExibirEstoque";
-			this->pnlExibirEstoque->Size = System::Drawing::Size(133, 75);
+			this->pnlExibirEstoque->Size = System::Drawing::Size(177, 92);
 			this->pnlExibirEstoque->TabIndex = 30;
 			// 
 			// lblTotal
 			// 
 			this->lblTotal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblTotal->Location = System::Drawing::Point(223, 66);
+			this->lblTotal->Location = System::Drawing::Point(297, 81);
+			this->lblTotal->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblTotal->Name = L"lblTotal";
-			this->lblTotal->Size = System::Drawing::Size(455, 40);
+			this->lblTotal->Size = System::Drawing::Size(607, 49);
 			this->lblTotal->TabIndex = 36;
 			this->lblTotal->Text = L"Total de produtos no estoque: 0";
 			this->lblTotal->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -786,9 +837,10 @@ namespace ProjetoAED1 {
 			// 
 			this->lblExibirEstoque->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblExibirEstoque->Location = System::Drawing::Point(263, 18);
+			this->lblExibirEstoque->Location = System::Drawing::Point(351, 22);
+			this->lblExibirEstoque->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblExibirEstoque->Name = L"lblExibirEstoque";
-			this->lblExibirEstoque->Size = System::Drawing::Size(374, 46);
+			this->lblExibirEstoque->Size = System::Drawing::Size(499, 57);
 			this->lblExibirEstoque->TabIndex = 0;
 			this->lblExibirEstoque->Text = L"Exibir estoque";
 			this->lblExibirEstoque->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -800,26 +852,14 @@ namespace ProjetoAED1 {
 			this->btnExibeEstoqueSair->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnExibeEstoqueSair->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnExibeEstoqueSair->Location = System::Drawing::Point(749, 463);
+			this->btnExibeEstoqueSair->Location = System::Drawing::Point(999, 570);
+			this->btnExibeEstoqueSair->Margin = System::Windows::Forms::Padding(4);
 			this->btnExibeEstoqueSair->Name = L"btnExibeEstoqueSair";
-			this->btnExibeEstoqueSair->Size = System::Drawing::Size(91, 37);
+			this->btnExibeEstoqueSair->Size = System::Drawing::Size(121, 46);
 			this->btnExibeEstoqueSair->TabIndex = 2;
 			this->btnExibeEstoqueSair->Text = L"Voltar";
 			this->btnExibeEstoqueSair->UseVisualStyleBackColor = false;
 			this->btnExibeEstoqueSair->Click += gcnew System::EventHandler(this, &frmMenu::btnExibeEstoqueSair_Click);
-			// 
-			// lblEstoqueVazio
-			// 
-			this->lblEstoqueVazio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->lblEstoqueVazio->ForeColor = System::Drawing::Color::Magenta;
-			this->lblEstoqueVazio->Location = System::Drawing::Point(260, 253);
-			this->lblEstoqueVazio->Name = L"lblEstoqueVazio";
-			this->lblEstoqueVazio->Size = System::Drawing::Size(372, 58);
-			this->lblEstoqueVazio->TabIndex = 35;
-			this->lblEstoqueVazio->Text = L"Estoque vazio!";
-			this->lblEstoqueVazio->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->lblEstoqueVazio->Visible = false;
 			// 
 			// dgvEstoque
 			// 
@@ -849,18 +889,34 @@ namespace ProjetoAED1 {
 			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
 			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->dgvEstoque->DefaultCellStyle = dataGridViewCellStyle2;
-			this->dgvEstoque->Location = System::Drawing::Point(121, 119);
+			this->dgvEstoque->Location = System::Drawing::Point(161, 146);
+			this->dgvEstoque->Margin = System::Windows::Forms::Padding(4);
 			this->dgvEstoque->Name = L"dgvEstoque";
 			this->dgvEstoque->ReadOnly = true;
-			this->dgvEstoque->Size = System::Drawing::Size(649, 325);
+			this->dgvEstoque->RowHeadersWidth = 51;
+			this->dgvEstoque->Size = System::Drawing::Size(865, 400);
 			this->dgvEstoque->TabIndex = 1;
+			// 
+			// lblEstoqueVazio
+			// 
+			this->lblEstoqueVazio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblEstoqueVazio->ForeColor = System::Drawing::Color::Magenta;
+			this->lblEstoqueVazio->Location = System::Drawing::Point(347, 311);
+			this->lblEstoqueVazio->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblEstoqueVazio->Name = L"lblEstoqueVazio";
+			this->lblEstoqueVazio->Size = System::Drawing::Size(496, 71);
+			this->lblEstoqueVazio->TabIndex = 35;
+			this->lblEstoqueVazio->Text = L"Estoque vazio!";
+			this->lblEstoqueVazio->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lblEstoqueVazio->Visible = false;
 			// 
 			// frmMenu
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::LightSkyBlue;
-			this->ClientSize = System::Drawing::Size(852, 512);
+			this->ClientSize = System::Drawing::Size(1136, 630);
 			this->Controls->Add(this->pnlExibirEstoque);
 			this->Controls->Add(this->pnlRemover);
 			this->Controls->Add(this->pnlAlterarQuantidade);
@@ -875,6 +931,7 @@ namespace ProjetoAED1 {
 			this->Controls->Add(this->btnExibirEstoque);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->MaximizeBox = false;
 			this->Name = L"frmMenu";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -926,6 +983,12 @@ namespace ProjetoAED1 {
 			pnlAdicionar->Show();
 
 			txtNome->Focus();
+		}
+
+		private: void limpaAdicionar() {
+			txtNome->Text = "";
+			txtPreco->Text = "";
+			txtQuantidade->Text = "";
 		}
 
 		private: System::Void btnAdicionarPanel_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -981,9 +1044,13 @@ namespace ProjetoAED1 {
 			lblResultado->Visible = true;
 
 			if (ok) {
+				limpaAdicionar();
+				txtNome->Focus();
 				lblResultado->ForeColor = System::Drawing::Color::DarkCyan;
 				lblResultado->Text = "Produto adicionado com sucesso!";
 			} else {
+				limpaAdicionar();
+				txtNome->Focus();
 				lblResultado->ForeColor= System::Drawing::Color::Magenta;
 				lblResultado->Text = "Falha ao adicionar o produto";
 			}
@@ -992,10 +1059,7 @@ namespace ProjetoAED1 {
 		private: System::Void btnAdicionarSair_Click(System::Object^ sender, System::EventArgs^ e) {
 			habilitaBotoesMenu(true);
 			pnlAdicionar->Hide();
-		
-			txtNome->Text = "";
-			txtPreco->Text = "";
-			txtQuantidade->Text = "";
+			limpaAdicionar();
 			lblResultado->Visible = false;
 
 			this->Show();
@@ -1043,10 +1107,15 @@ namespace ProjetoAED1 {
 			lblResultadoQuantidade->Visible = true;
 
 			if (ok) {
+				txtNomeAlterar->Text = "";
+				txtQuantidadeAlterar->Text = "";
+				txtNomeAlterar->Focus();
 				lblResultadoQuantidade->ForeColor = System::Drawing::Color::DarkCyan;
 				lblResultadoQuantidade->Text = "Quantidade alterada com sucesso!";;
-			}
-			else {
+			} else {
+				txtNomeAlterar->Text = "";
+				txtQuantidadeAlterar->Text = "";
+				txtNomeAlterar->Focus();
 				lblResultadoQuantidade->ForeColor = System::Drawing::Color::Magenta;
 				lblResultadoQuantidade->Text = "Falha ao alterar a quantidade";
 			}
@@ -1089,10 +1158,13 @@ namespace ProjetoAED1 {
 			lblResultadoRemover->Visible = true;
 
 			if (ok) {
+				txtNomeRemover->Text = "";
+				txtNomeRemover->Focus();
 				lblResultadoRemover->ForeColor = System::Drawing::Color::DarkCyan;
 				lblResultadoRemover->Text = "Produto removido com sucesso!";;
-			}
-			else {
+			} else {
+				txtNomeRemover->Text = "";
+				txtNomeRemover->Focus();
 				lblResultadoRemover->ForeColor = System::Drawing::Color::Magenta;
 				lblResultadoRemover->Text = "Falha ao remover o produto";
 			}
@@ -1134,6 +1206,9 @@ namespace ProjetoAED1 {
 			lblResultadoProduto->Visible = true;
 
 			if (ok) {
+				txtNomeExibirProduto->Text = "";
+				txtNomeExibirProduto->Focus();
+
 				gpbExibirProduto->Visible = true;
 				lblResultadoProduto->ForeColor = System::Drawing::Color::DarkCyan;
 				lblResultadoProduto->Text = "Produto econtrado no estoque!";
@@ -1142,6 +1217,9 @@ namespace ProjetoAED1 {
 				lblExibePreco->Text = Convert::ToString(produto->preco);
 				lblExibeQuantidade->Text = Convert::ToString(produto->quantidade);
 			} else {
+				txtNomeExibirProduto->Text = "";
+				txtNomeExibirProduto->Focus();
+				
 				gpbExibirProduto->Visible = false;
 				lblResultadoProduto->ForeColor = System::Drawing::Color::Magenta;
 				lblResultadoProduto->Text = "Produto não econtrado no estoque";

@@ -70,8 +70,7 @@ void insere(Estoque* e, Produto p, bool* ok) {
 
     if (vazio(e)) {
         e->primeiro = p_novo;
-    }
-    else {
+    } else {
         if (esta_no_estoque(e, p_novo->nome)) {
             *ok = false;
             return;
@@ -99,21 +98,18 @@ void retira(Estoque* e, std::string nome, bool* ok) {
             if (anterior == NULL) { // Começo da lista
                 e->primeiro = e->primeiro->proximo;
                 delete p_aux;
-            }
-            else if (p_aux->proximo == NULL) { // Fim da lista
+            } else if (p_aux->proximo == NULL) { // Fim da lista
                 e->ultimo = anterior;
                 anterior->proximo = NULL;
                 delete p_aux;
-            }
-            else { // Meio da lista
+            } else { // Meio da lista
                 anterior->proximo = p_aux->proximo;
                 delete p_aux;
             }
 
             *ok = 1;
             return;
-        }
-        else {
+        } else {
             anterior = p_aux;
             p_aux = p_aux->proximo;
         }
@@ -140,4 +136,5 @@ void altera_quantidade(Estoque* e, std::string nome, int quantidade, bool* ok) {
 
     *ok = true;
 }
+
 #pragma once
