@@ -56,7 +56,7 @@ ProdutoPtr retorna_produto(Estoque* e, std::string nome, bool* ok) {
 }
 
 void insere(Estoque* e, Produto p, bool* ok) {
-    if (p.quantidade <= 0) {
+    if (p.preco < .0 || p.quantidade <= 0) {
         *ok = false;
         return;
     }

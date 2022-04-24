@@ -3,3 +3,8 @@ E:\Code\ProjetoAED1\x64\Release\ProjetoAED1.vcxproj.SuggestedBindingRedirects.ca
 E:\Code\ProjetoAED1\x64\Release\ProjetoAED1.frmMenu.resources
 E:\Code\ProjetoAED1\x64\Release\ProjetoAED1.vcxproj.GenerateResource.cache
 E:\Code\ProjetoAED1\x64\Release\ProjetoAED1.exe
+C:\Users\ranza\OneDrive\Área de Trabalho\Code\ProjetoAED1\x64\Release\ProjetoAED1.vcxproj.AssemblyReference.cache
+C:\Users\ranza\OneDrive\Área de Trabalho\Code\ProjetoAED1\x64\Release\ProjetoAED1.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\ranza\OneDrive\Área de Trabalho\Code\ProjetoAED1\x64\Release\ProjetoAED1.frmMenu.resources
+C:\Users\ranza\OneDrive\Área de Trabalho\Code\ProjetoAED1\x64\Release\ProjetoAED1.vcxproj.GenerateResource.cache
+C:\Users\ranza\OneDrive\Área de Trabalho\Code\ProjetoAED1\x64\Release\ProjetoAED1.exe
